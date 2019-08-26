@@ -26,23 +26,26 @@ CREATE TABLE product (
 	category_id INT,
 	supplier_id INT,
 	purchases INT DEFAULT 0,
-	views INT DEFAULT 0,
 	CONSTRAINT pk_product_id PRIMARY KEY (id),
  	CONSTRAINT fk_product_category_id FOREIGN KEY (category_id) REFERENCES category (id),
 	CONSTRAINT fk_product_supplier_id FOREIGN KEY (supplier_id) REFERENCES user_detail(id),	
 );	
 
-INSERT INTO product (code, name, brand, description, unit_price, quantity, category_id, supplier_id, purchases, views)
-VALUES ('PRDABC123DEFX', 'iPhone 5s', 'apple', 'This is one of the best phone available in the market right now!', 18000, 5, 3, 2, 0, 0);
-INSERT INTO product (code, name, brand, description, unit_price, quantity, category_id, supplier_id, purchases, views)
-VALUES ('PRDDEF123DEFX', 'Samsung s7', 'samsung', 'A smart phone by samsung!', 32000, 2, 3, 3, 0, 0 );
-INSERT INTO product (code, name, brand, description, unit_price, quantity, category_id, supplier_id, purchases, views)
-VALUES ('PRDPQR123WGTX', 'Google Pixel', 'google', 'This is one of the best android smart phone available in the market right now!', 57000, 5, 3, 2, 0, 0 );
-INSERT INTO product (code, name, brand, description, unit_price, quantity, category_id, supplier_id, purchases, views)
-VALUES ('PRDMNO123PQRX', ' Macbook Pro', 'apple', 'This is one of the best laptops available in the market right now!', 54000, 3, 1, 2, 0, 0 );
-INSERT INTO product (code, name, brand, description, unit_price, quantity, category_id, supplier_id, purchases, views)
-VALUES ('PRDABCXYZDEFX', 'Dell Latitude E6510', 'dell', 'This is one of the best laptop series from dell that can be used!', 48000, 5, 1, 3, 0, 0 );
 
+INSERT INTO product (code, name, description, unit_price, quantity, category_id, supplier_id, purchases)
+VALUES ('PRDABC123','apple','Fresh Apples from Mustang',120.00,15,1,1,0);
+INSERT INTO product (code, name, description, unit_price, quantity, category_id, supplier_id, purchases)
+VALUES ('PRDABC124','banana','Fresh Banana',100.00,20,1,1,0);
+ INSERT INTO product (code, name, description, unit_price, quantity, category_id, supplier_id, purchases)
+VALUES ('PRDABC125','watermelon','Fresh & Juicy WaterMelon',300.00,10,1,2,0);
+ INSERT INTO product (code, name, description, unit_price, quantity, category_id, supplier_id, purchases)
+VALUES ('PRDABC226','spinach','Fresh Spinach',15.00,30,2,2,0);
+ INSERT INTO product (code, name, description, unit_price, quantity, category_id, supplier_id, purchases)
+VALUES ('PRDABC223','potato','Fresh Potato',125.00,10,2,3,0);
+ INSERT INTO product (code, name, description, unit_price, quantity, category_id, supplier_id, purchases)
+VALUES ('PRDABC323','biscuit','Tasty Biscuit',50.00,30,3,4,0);
+ INSERT INTO product (code, name, description, unit_price, quantity, category_id, supplier_id, purchases)
+VALUES ('PRDABC324','Noodles','yummy Noodles',30.00,25,3,4,0);
 
 
 
@@ -73,4 +76,10 @@ INSERT INTO user_detail
 (first_name, last_name, role, password, email, contact_number) 
 VALUES ('Khozema', 'Nullwala', 'USER', '$2a$06$4mvvyO0h7vnUiKV57IW3oudNEaKPpH1xVSdbie1k6Ni2jfjwwminq', 'kn@gmail.com', '7777777777');
 
+
+
+
+--Debtor List
+INSERT into DEBTOR ( Name,Address,Contact,Rem_Amount)
+VALUES('Ram','Bhaktapur','9874456311',120.00)
 

@@ -20,8 +20,6 @@ public class Product {
 	
 	private String name;
 	
-	private String brand;
-	
 	private String description;
 	
 	private double unitPrice;
@@ -34,7 +32,6 @@ public class Product {
 	
 	private int purchases;
 	
-	private int views;
 	
 	
 	
@@ -46,19 +43,17 @@ public class Product {
 
 	
 	// Constructor
-	public Product( String code, String name, String brand, String description, double unitPrice, int quantity,
-			int categoryId, int supplierId, int purchases, int views) {
+	public Product( String code, String name, String description, double unitPrice, int quantity,
+			int categoryId, int supplierId, int purcahses) {
 		super();
 		this.code = code;
 		this.name = name;
-		this.brand = brand;
 		this.description = description;
 		this.unitPrice = unitPrice;
 		this.quantity = quantity;
 		this.categoryId = categoryId;
 		this.supplierId = supplierId;
 		this.purchases = purchases;
-		this.views = views;
 	}
 
 
@@ -96,17 +91,6 @@ public class Product {
 	public void setName(String name) {
 		this.name = name;
 	}
-
-
-	public String getBrand() {
-		return brand;
-	}
-
-
-	public void setBrand(String brand) {
-		this.brand = brand;
-	}
-
 
 	public String getDescription() {
 		return description;
@@ -167,26 +151,14 @@ public class Product {
 		this.purchases = purchases;
 	}
 
-
-	public int getViews() {
-		return views;
-	}
-
-
-	public void setViews(int views) {
-		this.views = views;
-	}
-
-
 	
 	
 	// toString() method
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", code=" + code + ", name=" + name + ", brand=" + brand + ", description="
+		return "Product [id=" + id + ", code=" + code + ", name=" + name + ", description="
 				+ description + ", unitPrice=" + unitPrice + ", quantity=" + quantity + ", categoryId=" + categoryId
-				+ ", supplierId=" + supplierId + ", purchases=" + purchases + ", views=" + views + ", isActive="
-				+  "]";
+				+ ", supplierId=" + supplierId + ", purchases=" + purchases +   "]";
 	}
 	
 	
